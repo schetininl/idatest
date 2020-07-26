@@ -5,7 +5,7 @@
 
 {% if images %}
     {% for img in images %}
-        <p></p><a href="{% url 'img_view' img.pk %}">{{ img.name }}</a></p>
+        <p><a href="{% url 'img_view' img.pk %}">{{ img.name }}</a></p>
     {% endfor %}
 {% else %}
     <p>Нет доступных изображений</p>
