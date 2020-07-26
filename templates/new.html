@@ -3,6 +3,12 @@
 {% block header %}Новое изображение{% endblock %}
 {% block content %}
 
-Новое
+<form method="POST" enctype="multipart/form-data">{% csrf_token %}
+    {% if error %}
+        <p style="color: red">{{error}}</p>
+    {% endif %}
+    {{ form.as_p }}
+    <button type="submit" >Отправить</button>
+</form>
 
 {% endblock %}
