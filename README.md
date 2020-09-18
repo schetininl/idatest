@@ -1,15 +1,16 @@
-# Инструкцию по развороту и запуску проекта
+# Тестовое задание для ИДАГРУПП
 
-1. Скачать проект или клонировать с помощью git (git clone https://github.com/schetininl/idatest.git)
 
-2. Перейти в каталог с проектом и создать виртуальное окружение (python3 -m venv venv)
+## Описание
+Сервис, на основе фреймворка Django, который позволит загружать изображения с компьютера пользователя, или по ссылке, а затем изменять их размер. 
 
-3. Запустить виртуальное окружение (source venv/bin/activate) на Mac/Linux или (source venv/Scripts/activate) на Windows
 
-4. Установить все необходимые пакеты, указанные в файле requirements.txt (pip install -r requirements.txt)
+## Запуск (docker)
 
-5. Запустить миграции (python manage.py migrate)
+Запустить docker-compose:
 
-6. Для проверки работы проекта запустить тестовый сервер (python manage.py runserver)
+```docker-compose up```
 
-7. Перейти по адресу http://127.0.0.1:8000
+При первом запуске для функционирования проекта обязательно выполнить миграции: 
+
+```docker-compose exec web python manage.py migrate```
